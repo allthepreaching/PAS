@@ -1,0 +1,32 @@
+#slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: max-content;
+  margin: 10px 0;
+}
+
+.slider-wrapper {
+  width: 100%;
+}
+
+.slider-wrapper .carousel {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+.carousel .slide {
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: 0px 3px 5px rgba(255, 255, 255, 0.7);
+}
+
+body.dark .carousel .slide {
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.7);
+}
+@media (min-width: 769px) {
+  .slider-wrapper {
+    padding-right: 45px;
+  }
+}

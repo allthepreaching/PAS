@@ -1,0 +1,36 @@
+.sermons-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0 10px 0 10px;
+}
+
+.row {
+  max-width: 1250px;
+}
+
+.col-md-3 ul {
+  list-style: none;
+}
+
+.col-md-3 ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 3px 5px rgba(255, 255, 255, 0.7);
+}
+
+.col-md-3 ul li a:hover {
+  color: rgb(255, 0, 0);
+  font-weight: 500;
+  text-shadow: 0px 3px 5px rgba(255, 0, 0, 0.7);
+}
+
+body.dark .col-md-3 ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+body.dark .col-md-3 ul li a:hover {
+  color: rgb(255, 0, 0);
+  text-shadow: 0px 3px 5px rgba(109, 0, 0, 0.7);
+}

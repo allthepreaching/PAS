@@ -1,2 +1,2 @@
-# PAS
+# pastorandersonsermons
 PastorAndersonSermons.com

@@ -1,0 +1,114 @@
+.boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxes .contain {
+  display: flex;
+  width: 900px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  padding-right: 30px;
+}
+
+.boxes .ns-label {
+  line-height: 1;
+  align-items: center;
+  font-size: xx-large;
+  font-weight: bold;
+  color: rgb(251, 255, 0);
+  text-align: left;
+  text-shadow: 5px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .boxes .ns-label {
+  color: rgb(0, 0, 0);
+}
+
+.box {
+  flex: 1;
+  width: 100%;
+  display: table;
+  align-self: stretch;
+  text-align: center;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  margin: 5px 15px;
+  padding: 5px;
+  box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.8);
+}
+
+body.dark .box {
+  flex: 1;
+  max-height: 110px;
+  background-color: #e4e9f7;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  margin: 5px 15px;
+  padding: 5px;
+}
+
+.box li {
+  list-style: none;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.box li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1em;
+  text-shadow: 0px 3px 5px rgba(255, 255, 255, 0.7);
+}
+
+.box li a:hover {
+  text-decoration: none;
+  color: rgb(255, 0, 0);
+  font-size: 1em;
+  text-shadow: 0px 3px 5px rgba(255, 0, 0, 0.7);
+}
+
+body.dark .box li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+body.dark .box li a:hover {
+  text-decoration: none;
+  color: rgb(255, 0, 0);
+  font-size: 1em;
+  text-shadow: 0px 3px 5px rgba(126, 0, 0, 0.7);
+}
+
+@media (max-width: 1000px) {
+  .boxes .contain {
+    width: 650px;
+  }
+  .boxes .ns-label {
+    text-align: center;
+    padding-left: 27px;
+  }
+}
+
+@media (max-width: 768px) {
+  .boxes .contain {
+    width: 200px;
+    display: block;
+    text-align: center;
+  }
+  .boxes .ns-label {
+    text-align: center;
+    padding-left: 27px;
+  }
+}
