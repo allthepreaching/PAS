@@ -12,14 +12,14 @@ include_once 'header.php'
             <?php
             if (isset($_POST['submit-search'])) {
                 $search = mysqli_real_escape_string($conn, $_POST['search']);
-                $sql = "SELECT * FROM pasUpload WHERE name LIKE '%$search%'";
+                $sql = "SELECT * FROM videos WHERE vid_category = 'fsanderson' && name LIKE '%$search%' ORDER BY name ASC";
                 $result = mysqli_query($conn, $sql);
                 $queryResult = mysqli_num_rows($result);
 
                 if ($queryResult > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo '<div class="search-box">';
-                        echo $row['code'];
+                        echo $row['vid_code'];
                         echo '</div>';
                     }
                 } else {

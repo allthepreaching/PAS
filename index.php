@@ -17,12 +17,12 @@ include_once 'header.php'
                 Newest <br> Sermons
             </div>
             <?php
-            $query = 'SELECT * FROM ( SELECT * FROM pasUpload ORDER BY date DESC LIMIT 3) as r ORDER BY date DESC';
+            $query = 'SELECT * FROM ( SELECT * FROM videos WHERE vid_category = "fsanderson" ORDER BY date DESC LIMIT 3) as r ORDER BY date DESC';
             $result = mysqli_query($conn, $query);
             if ($result && mysqli_num_rows($result) > 0) :
                 while ($uploads = mysqli_fetch_assoc($result)) :
                     echo '<div class="box">';
-                    echo $uploads['code'];
+                    echo $uploads['vid_code'];
                     echo '</div>';
                 endwhile;
             endif;
@@ -54,13 +54,13 @@ include_once 'header.php'
     <div class="row">
 
         <?php
-        $countQuery = "SELECT COUNT(*) AS count FROM `pasUpload`";
+        $countQuery = "SELECT COUNT(*) AS count FROM `videos` WHERE vid_category = 'fsanderson'";
         $countResult = mysqli_query($conn, $countQuery);
         while ($row = mysqli_fetch_assoc($countResult)) {
             $countOutput = $row['count'];
         }
 
-        $codeQuery = $mysqli->query("SELECT * FROM pasUpload ORDER BY name ASC");
+        $codeQuery = $mysqli->query("SELECT * FROM `videos` WHERE vid_category = 'fsanderson' ORDER BY name ASC");
         $codes = $codeQuery->fetch_all(MYSQLI_ASSOC);
         $codeCount = count($codes);
 
@@ -81,7 +81,7 @@ include_once 'header.php'
 
                 <?php
                 foreach ($chunks[0] as $data) {
-                    echo $data['code'];
+                    echo $data['vid_code'];
                 }
 
                 ?>
@@ -94,7 +94,7 @@ include_once 'header.php'
 
                 <?php
                 foreach ($chunks[1] as $data) {
-                    echo $data['code'];
+                    echo $data['vid_code'];
                 }
                 ?>
 
@@ -106,7 +106,7 @@ include_once 'header.php'
 
                 <?php
                 foreach ($chunks[2] as $data) {
-                    echo $data['code'];
+                    echo $data['vid_code'];
                 }
                 ?>
 
@@ -118,7 +118,7 @@ include_once 'header.php'
 
                 <?php
                 foreach ($chunks[3] as $data) {
-                    echo $data['code'];
+                    echo $data['vid_code'];
                 }
                 ?>
 

@@ -1,1 +1,0 @@
-[24-May-2022 01:30:17 America/New_York] PHP Warning:  mysqli_connect(): (HY000/2002): No such file or directory in /home/alltdjli/pastorandersonsermons.allthepreaching.com/dev/includes/dbh.inc.php on line 24
